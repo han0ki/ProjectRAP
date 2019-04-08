@@ -9,6 +9,7 @@
   <link href="css/materiallize1.0.0.css" rel="stylesheet">
   <link href="css/materiallize0.97.7.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+   <link href="css/hover.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"  media="screen,projection"/>
@@ -16,6 +17,13 @@
 </head>
 <body>
 
+
+
+<!--- MENU --->
+
+
+
+<div class="navbar-fixed">
 <nav>
     <div class="nav-wrapper grey darken-4">
     	<div class="row">
@@ -27,31 +35,68 @@
         <li><a style="font-size:20px;width:100%;" href="index.html">Главная</a></li>
         <li><a style="font-size:20px;width:100%;" href="index2.html">О нас</a></li>
         <li><a style="font-size:20px;width:100%;" href="index3.html">Новости</a></li>
-        <li><i class="material-icons">call</i>
-        </li>
-        <li>    +7(987)89-33-780</li>
+        <li><i class="material-icons">call</i></li>
+        <li>+7(987)89-33-780</li>
+        <li><i class="material-icons">home</i>
+        <li> г.Майами с.США ул.Геттовская кв.22 дом.8</li>
       </ul>
 <ul class="side-nav" id="mobile-demo">
         <li><a href="index.html">Главная</a></li>
         <li><a href="index2.html">Новости</a></li>
         <li><a href="index3.html">Онас</a></li>
-        
       </ul>
    </div>
-    
   </nav>
-<div class="fullwidth-bg">
-    <div class="video-layer">
-    </div>
-    <video loop muted autoplay poster="/uploads/video-bg-alt.jpg" class="fullscreen-bg__video" width="100%">
-        <source src="vide.mp4" type="video/webm">
-    </video>
 </div>
 
 
 
+<!--- VIDEO --->
 
-  <!-- SLIDER -->
+
+
+
+
+    
+    <video loop muted autoplay poster="/uploads/video-bg-alt.jpg" class="fullscreen-bg__video" width="100%">
+        <source src="vide.mp4" type="video/webm">
+
+    </video>
+
+<div class="jor">
+	 <p>Последнии новости</p>
+	</div>
+<div class="news">
+			<div class="grid">
+				<figure class="effect-sadie">
+					<img src="img/57bbeda1d3b6e156b618404b.jpg"/>
+					<figcaption>
+						<h2>KIZARU</h2>
+						<p>Известный рэп-исполнитель подрался с его фанатом, подробнее вы можете узнать кликнув по данному новостному блоку</p>
+						<a href="#">View more</a>
+					</figcaption>			
+		        </figure>
+		        <figure class="effect-sadie">
+					<img src="https://yt3.ggpht.com/a-/AAuE7mAAep1zNty3LERET8jad3qcDZak6HEDYPKj3w=s900-mo-c-c0xffffffff-rj-k-no"/>
+					<figcaption>
+						<h2>LIL XAN</h2>
+						<p>Известный рэп-исполнитель попал в больницу после передозировки чипсов "Cheetos"</p>
+						<a href="#">View more</a>
+					</figcaption>			
+		        </figure>
+		        <figure class="effect-sadie">
+					<img src="https://yt3.ggpht.com/a-/AAuE7mA7gn1SXwPXasq8RJntR75F0uDn2Ttl79HF9g=s900-mo-c-c0xffffffff-rj-k-no"/>
+					<figcaption>
+						<h2>Lil PumP</h2>
+						<p>Известный рэп-исполнитель подрался с его фанатом, подробнее вы можете узнать кликнув по данному новостному блоку</p>
+						<a href="#">View more</a>
+					</figcaption>			
+		        </figure>
+            </div>
+</div>
+</div>
+</div>
+  <!-- SLIDER --->
 
 
 
@@ -92,10 +137,7 @@
 
 
 
-
-  <!-- MERCH -->
-
-
+  <!-- MERCH --->
 
 
 
@@ -166,15 +208,17 @@
     </div>
   </div>
 </div>
-</div>
 
 
 
-<!-- Contact US !-->
+
+<!--- Contact US --->
+
+
 
 
 <div class="ContactUS">
-<div class="container">
+<<div class="container">
     <div class="contact-form z-depth-5 grey lighten-5 " id="contact" style="padding: 0 70px;border-radius:15px;">
           <div class="row">                       <h2 class="center-align" style="font-family: 'HouschkaRounded-Bold';font-size: 40px;    padding: 18px;"> Оставьте заявку на ремонт</h2>
             <form  id="contactForm" data-toggle="validator" action="" method="post">
@@ -194,14 +238,48 @@
                     <textarea id="message" class="form-control materialize-textarea validate" required name="message"></textarea >
                     <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">Submit
     <i class="material-icons right">send</i>
-  </button>
-                </div>
-            </form>
+  </button>      
+                </div>                                                   
+            </form>                                     
         </div> 
     </div>
-  </div>
+  </div>  
   <?php require_once 'controller.php' ?>
- 
+</div>
+</div>
+
+
+
+
+<!--- FOOTER --->
+
+
+
+
+  <footer class="page-footer grey darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">RAPNEWS</h5>
+                <p class="grey-text text-lighten-4">Все новости про RAP</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Ссылки</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">VK</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Telegram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
