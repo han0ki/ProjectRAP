@@ -29,9 +29,30 @@ position: relative;
 }
 
 
+.page-footer{
+margin-top: 0px !important;
+}
 
+.news{
+   background-image: url(../img/elitefon.ru-26093.jpg);
+position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: auto;
+    overflow: auto;
+}
 
-
+.jor{
+  margin-top: -6px;
+  text-align: center;
+color: white;
+font-size: 30px;
+background-color: black;
+padding: 10px;
+font-family: 'Raleway', Arial, sans-serif;
+}
 
 
 
