@@ -55,6 +55,131 @@ font-family: 'Raleway', Arial, sans-serif;
 }
 
 
+.Newsn1 span{
+  font-size: 50px;
+}
+
+.Newsn1 p{
+  font-size: 20px;
+}
+
+.Newsn1 img{
+  width: 100%;
+  height: auto;
+}
+.Newsn1 {
+  background-color: white;
+      background-color: white;
+    height: auto;
+    padding: 60px;
+    border-radius: 50px;
+}
+
+.backgroundnews{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  background-image: url(../img/elitefon.ru-26093.jpg);
+  height: auto;
+}
+
+.Newsn2 span{
+  font-size: 50px;
+}
+
+.Newsn2 p{
+  font-size: 20px;
+}
+
+.Newsn2 img{
+  width: 100%;
+  height: auto;
+}
+.Newsn2 {
+  background-color: white;
+      background-color: white;
+    height: auto;
+    padding: 60px;
+    border-radius: 50px;
+}
+
+.backgroundnews{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  background-image: url(../img/elitefon.ru-26093.jpg);
+  height: auto;
+}
+.backgroundnews1{
+ position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: auto;
+    overflow: auto;
+  background-image: url(https://f.vividscreen.info/soft/503852714a54c53dfa97c21eefef84c3/Miami-Mid-Beach-2880x1920.jpg);
+  height: auto;
+}
+#sidenav-overlay{
+  display: none !important;
+}
+.office{
+      text-align: center;
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1920px)  {
+.Newsn1 img{ 
+    width: 40%;
+}
+.Newsn2 img{ 
+    width: 50%;
+}
+}
+@media only screen and (min-width: 994px) and (max-width: 1236px)  {
+#nav-mobile{
+  display: none !important;
+}
+
+nav .brand-logo{
+  margin-left: 237px;
+}
+
+.button-collapse{
+  display: inline-block !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 1920px)  {
+.Newsn1 img{ 
+    width: 40%;
+}
+}
+
+
+
+
+
+
 
 
 
