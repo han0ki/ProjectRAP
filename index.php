@@ -19,7 +19,6 @@
 <body>
 
 
-
 <!--- MENU --->
 
 
@@ -212,12 +211,11 @@
 
 
 
-
 <div class="ContactUS">
 <div class="container">                  
     <div class="contact-form z-depth-5 grey lighten-5 " id="contact" style="padding: 0 70px;border-radius:55px;">   
           <div class="row">                       <h2 class="center-align" style="font-size: 40px;    padding: 18px;font-family: 'Roboto Condensed', sans-serif;">Обратная связь с редакцией</h2>            
-            <form  id="contactForm" data-toggle="validator"  method="post">
+            <form  method="post" id="contactForm" data-toggle="validator">
                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                 
                 <div class="input-field col m12 s12 wow fadeIn a2" data-wow-delay="0.2s">
@@ -234,7 +232,8 @@
                 <div class="input-field col m12 s12 wow fadeIn a6" data-wow-delay="0.6s">
                 	<i class="material-icons prefix">mode_edit</i>
                     <label for="message" class="h4 ">Сообщение</label>
-                    <textarea id="message" name="message" class="form-control materialize-textarea validate" required></textarea>     
+                    <textarea id="message" name="message" class="form-control materialize-textarea validate" required></textarea>   
+        
                     <button class="btn waves-effect waves-light grey darken-4" type="submit" name="submit" value="submit"style="float: right;">Отправить
     <i class="material-icons right">send</i>
   </button>      
@@ -248,8 +247,7 @@ require 'controller.php';
   </div>  
 </div>
 </div>
-
-
+</head>
 
 
 <!--- FOOTER --->
@@ -283,7 +281,6 @@ require 'controller.php';
             </div>
           </div>
         </footer>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="js/materiallize0.97.7.js"></script>
@@ -291,5 +288,14 @@ require 'controller.php';
 <script src="js/materialize.js"></script>
 <script src="js/materialize.min.js"></script>
 <script src="js/script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcdX50UAAAAAOW5pCFUO8Fri_40DsClUCfrTRCR"></script>
+
+<script>
+  grecaptcha.ready(function() {
+      grecaptcha.execute('6LcdX50UAAAAAOW5pCFUO8Fri_40DsClUCfrTRCR', {action: 'homepage'}).then(function(token) {
+         
+      });
+  });
+  </script>
 </body>
 </html>

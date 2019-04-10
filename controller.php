@@ -2,13 +2,13 @@
     //check if submit button is clicked
   If(isset($_POST['submit'])){
     try {
-    $conn = new PDO("mysql:host=localhost;dbname=baza", "root", "");
+    $conn = new PDO("mysql:host=localhost;dbname=shumteh_app_wordpress_0", "shumteh_app_wordpress_0", "YUG3HWXn");
 
   // set the PDO error mode to exception
    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
    // prepare sql and bind parameters
-   $stmt = $conn->prepare("INSERT INTO tab2 (name, tel, message)
+   $stmt = $conn->prepare("INSERT INTO tab1 (name, tel, message)
     VALUES (:name, :tel, :message)");
     $stmt->bindParam(':name', $name);
    $stmt->bindParam(':tel', $tel);
