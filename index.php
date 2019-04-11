@@ -1,3 +1,6 @@
+<?php require "regis.php"?>
+<?php require "vhod.php"?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +8,7 @@
   <meta charset="UTF-8">
   <title>RAPNEWS</title>
 <link href="css/materialize.css" rel="stylesheet">
+<link href="css/magnific-popup.css" rel="stylesheet">
   <link href="css/materialize.min.css" rel="stylesheet">
   <link href="css/materiallize1.0.0.css" rel="stylesheet">
   <link href="css/materiallize0.97.7.css" rel="stylesheet">
@@ -35,8 +39,8 @@
         <li><a  href="index.php">Главная</a></li>
         <li><a  href="onas.php">О нас</a></li>
         <li><a  href="#glav">Новости</a></li>
-        <li><i class="material-icons">call</i></li>
-        <li>+7(987)89-33-780</li>
+        <li><a class="modal-trigger" href="#modal2">Войти</a></li>
+        <li><a  class="modal-trigger" href="#modal1">Регистрация</a></li>
       </ul>
 <ul class="side-nav" id="mobile-demo">
         <li><a href="index.php">Главная</a></li>
@@ -46,17 +50,91 @@
    </div>
   </nav>
 </div>
+<?php 
 
 
+?>
 
+    <div id="modal1" class="modal">
+          <div class="row">                       <h2 class="center-align" style="font-size: 40px;    padding: 18px;font-family: 'Roboto Condensed', sans-serif;">Регистрация</h2>            
+            <form  method="post" id="contactForm" data-toggle="validator">
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                
+                <div class="input-field col m12 s12 wow fadeIn a2" data-wow-delay="0.2s">
+                  <i class="material-icons prefix">account_circle</i>
+                    <label for="name" class="h4">Введите ваш логин</label>
+
+                    <input type="text" name="username" class="form-control validate" id="name" required data-error="NEW ERROR MESSAGE">
+                </div>
+                <div class="input-field col m12 s12 wow fadeIn a4" data-wow-delay="0.4s">
+                  <i class="material-icons prefix">lock</i>
+                    <label for="tel" class="h4">Введите ваш пароль</label>
+                    <input type="password" name="password1" class="form-control validate" id="tel"  required>                
+                </div>
+                <div class="input-field col m12 s12 wow fadeIn a6" data-wow-delay="0.6s">
+                  <i class="material-icons prefix">lock</i>
+                    <label for="message" class="h4 ">Введите ваш пароль еще раз</label>
+                     <input type="password" name="password2" class="form-control validate" id="tel"  required>
+        
+                    <button class="btn waves-effect waves-light grey darken-4" type="submit" name="submit" value="submit"style="float: right;">Регистрация
+    <i class="material-icons right">mouse</i>
+  </button>  
+  </form>    
+</div>
+</div>
+</div>
+<?php
+  if(empty($_COOKIE['username'])) {
+?>
+<div id="modal2" class="modal">
+          <div class="row">                       <h2 class="center-align" style="font-size: 40px;    padding: 18px;font-family: 'Roboto Condensed', sans-serif;">Вход</h2>            
+            <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="contactForm" data-toggle="validator">
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                
+                <div class="input-field col m12 s12 wow fadeIn a2" data-wow-delay="0.2s">
+                  <i class="material-icons prefix">account_circle</i>
+                    <label for="name" class="h4">Введите ваш логин</label>
+
+                    <input type="text" name="username" class="form-control validate" id="name" required data-error="NEW ERROR MESSAGE">
+                </div>
+                <div class="input-field col m12 s12 wow fadeIn a6" data-wow-delay="0.6s">
+                  <i class="material-icons prefix">lock</i>
+                    <label for="message" class="h4 ">Введите пароль </label>
+                     <input type="password" name="password" class="form-control validate" id="tel"  required>
+        
+                    <button class="btn waves-effect waves-light grey darken-4" type="submit" name="submit" value="submit"style="float: right;">Войти
+    <i class="material-icons right">mouse</i>
+  </button>  
+  </form>    
+</div>
+</div>
+</div>
+<?php
+}
+else {
+  ?>
+  <p><a href="#">Привет бро, я слышал тебя зовут <?php echo $_COOKIE['username']; ?></a></p>
+  <p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p>
+<?php 
+}
+?>
 <!--- VIDEO --->
 
 
 
 	
-    <video loop muted autoplay poster="/uploads/video-bg-alt.jpg" class="fullscreen-bg__video" width="100%">
+    <video loop muted autoplay  class="fullscreen-bg__video" width="100%">
         <source src="vide.mp4" type="video/webm">
     </video>
+
+
+
+
+    <!--- NEWS --->
+
+
+
+
    
 <div class="jor" id="glav">
 	 <p>Последнии новости</p>
@@ -91,6 +169,10 @@
 </div>
 </div>
 </div>
+
+
+
+
   <!-- SLIDER --->
 
 
@@ -99,28 +181,28 @@
    <div class="slider" style="margin-top:-6px;    height: 420px;">
     <ul class="slides" style="height: 420px !important;">
       <li>
-        <img src="https://im0-tub-ru.yandex.net/i?id=6dd5cfc6e1bdd402e86e726e38de0d43-l&n=13"> <!-- random image -->
+        <img src="https://im0-tub-ru.yandex.net/i?id=6dd5cfc6e1bdd402e86e726e38de0d43-l&n=13"> 
         <div class="caption left-align white-text">
           <h3>Все актуальные новости рэпа только у нас!</h3>
           <h5 class="light white-text text-lighten-3">KIZARU принял участие в видео, в котором рассказал о том, почему не выходит его долгожданный альбом "Яд"</h5>
         </div>
       </li>
       <li>
-        <img src="https://im0-tub-ru.yandex.net/i?id=6fda9407a32fe11555c705698e9dd882-l&n=13"> <!-- random image -->
+        <img src="https://im0-tub-ru.yandex.net/i?id=6fda9407a32fe11555c705698e9dd882-l&n=13"> 
         <div class="caption left-align">
           <h3>Kanye West</h3>
           <h5 class="light grey-text text-lighten-3">Имя этого рэпера известно всему миру. Его звезда на небосклоне шоу-бизнеса вспыхнула ярко, красиво и несколько неожиданно. В одно мгновение Канье из малоизвестного музыканта превратился в культовую личность</h5>
         </div>
       </li>
       <li>
-        <img src="https://im0-tub-ru.yandex.net/i?id=245bfb30f848dbe38569a4d3931f38cf-l&n=13"> <!-- random image -->
+        <img src="https://im0-tub-ru.yandex.net/i?id=245bfb30f848dbe38569a4d3931f38cf-l&n=13">
         <div class="caption right-align">
           <h3>Lil Pump</h3>
           <h5 class="light grey-text text-lighten-3">Американский рэпер, певец и автор песен из Майами, штат Флорида. Наибольшую популярность получил после выхода сингла «Gucci Gang», которая достигла третьего места в американском чарте Billboard Hot 100</h5>
         </div>
       </li>
       <li>
-        <img src="https://im0-tub-ru.yandex.net/i?id=4f7ffb37aea42ddb56d67754bf719585-l&n=13"> <!-- random image -->
+        <img src="https://im0-tub-ru.yandex.net/i?id=4f7ffb37aea42ddb56d67754bf719585-l&n=13">
         <div class="caption right-align">
           <h3>Lil Skies</h3>
           <h5 class="light grey-text text-lighten-3">Lil Skies сделает в ближайшем будущем, и куда заведет его музыка. Мне будет очень приятно, если ты поделишься этой статьей с друзьями.</h5>
@@ -211,6 +293,7 @@
 
 
 
+
 <div class="ContactUS">
 <div class="container">                  
     <div class="contact-form z-depth-5 grey lighten-5 " id="contact" style="padding: 0 70px;border-radius:55px;">   
@@ -250,6 +333,8 @@ require 'controller.php';
 </head>
 
 
+
+
 <!--- FOOTER --->
 
 
@@ -281,6 +366,7 @@ require 'controller.php';
             </div>
           </div>
         </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="js/materiallize0.97.7.js"></script>
@@ -288,8 +374,9 @@ require 'controller.php';
 <script src="js/materialize.js"></script>
 <script src="js/materialize.min.js"></script>
 <script src="js/script.js"></script>
+<script src="/templates/<?php echo $this->template ?>/js/magnific-popup.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6LcdX50UAAAAAOW5pCFUO8Fri_40DsClUCfrTRCR"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
   grecaptcha.ready(function() {
       grecaptcha.execute('6LcdX50UAAAAAOW5pCFUO8Fri_40DsClUCfrTRCR', {action: 'homepage'}).then(function(token) {

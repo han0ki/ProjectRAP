@@ -130,6 +130,14 @@ font-family: 'Raleway', Arial, sans-serif;
       text-align: center;
 }
 
+.hidden{
+  display: none;
+}
+.modal{
+            padding: 0px 70px !important;
+    border-radius: 72px !important;
+    background-color: white;
+  }
 
 @media only screen and (min-width: 800px) and (max-width: 1920px)  {
 .Newsn1 img{ 

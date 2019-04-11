@@ -5,7 +5,6 @@
     var elems = document.querySelectorAll('.slider');
     var instances = M.Slider.init(elems, {'height' : 400});
   });
-  // Or with jQuery
 
   $(document).ready(function(){
     $('.slider').slider();
@@ -23,3 +22,8 @@ $('html, body').stop().animate({
 window.location.hash = target;
 });
 });
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+

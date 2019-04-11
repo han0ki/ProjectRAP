@@ -2,7 +2,7 @@
     //check if submit button is clicked
   If(isset($_POST['submit'])){
     try {
-    $conn = new PDO("mysql:host=localhost;dbname=shumteh_app_wordpress_0", "shumteh_app_wordpress_0", "YUG3HWXn");
+    $conn = new PDO("mysql:host=localhost;dbname=baza", "root", "");
 
   // set the PDO error mode to exception
    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
