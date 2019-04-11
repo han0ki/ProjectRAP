@@ -41,6 +41,7 @@
         <li><a  href="#glav">Новости</a></li>
         <li><a class="modal-trigger" href="#modal2">Войти</a></li>
         <li><a  class="modal-trigger" href="#modal1">Регистрация</a></li>
+        <li><a  class="modal-trigger" href="admin.php">Админка</a></li>
       </ul>
 <ul class="side-nav" id="mobile-demo">
         <li><a href="index.php">Главная</a></li>
@@ -88,7 +89,7 @@
 ?>
 <div id="modal2" class="modal">
           <div class="row">                       <h2 class="center-align" style="font-size: 40px;    padding: 18px;font-family: 'Roboto Condensed', sans-serif;">Вход</h2>            
-            <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="contactForm" data-toggle="validator">
+            <form  action="vhod.php" method="POST" id="contactForm" data-toggle="validator">
                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                 
                 <div class="input-field col m12 s12 wow fadeIn a2" data-wow-delay="0.2s">
